@@ -9,7 +9,8 @@
 
 #include <stdio.h>
 #include <tchar.h>
+#include <iostream>
 
+#include <opencv2/core/core.hpp>
+#include <opencv2/highgui/highgui.hpp>
 
-
-// TODO: reference additional headers your program requires here
