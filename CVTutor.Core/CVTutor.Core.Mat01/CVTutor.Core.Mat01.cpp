@@ -16,18 +16,24 @@ static const string WINDOW_NAME = "Display window";
 
 int main(int argc, char** argv)
 {
-	if (argc != 2)
+	//if (argc != 2)
+	//{
+	//	cout << " Usage: requires image arg." << endl;
+	//	system("pause");
+	//	return -1;
+	//}
+
+	string imageName("../../sample-data/HappyFish.jpg"); // by default
+	if (argc > 1)
 	{
-		cout << " Usage: requires image arg." << endl;
-		system("pause");
-		return -1;
+		imageName = argv[1];
 	}
 
 	// For debugging.
 	namedWindow(WINDOW_NAME, WINDOW_AUTOSIZE);
 
 	Mat A, C;                          // creates just the header parts
-	A = imread(argv[1], IMREAD_COLOR); // here we'll know the method used (allocate matrix)
+	A = imread(imageName, IMREAD_COLOR); // here we'll know the method used (allocate matrix)
 	if (!A.data) // Check for invalid input
 	{
 		cout << "Could not open or find the image" << endl;
