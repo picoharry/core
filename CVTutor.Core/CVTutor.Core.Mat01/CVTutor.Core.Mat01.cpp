@@ -5,61 +5,69 @@
 
 using namespace cv;
 using namespace std;
+using namespace cvtutor::core;
+
 
 // Tutorial
-// http://docs.opencv.org/master/d6/d6d/tutorial_mat_the_basic_image_container.html
+// http://docs.opencv.org/3.1.0/d6/d6d/tutorial_mat_the_basic_image_container.html
+
+
+static const string WINDOW_NAME = "Display window";
 
 int main(int argc, char** argv)
 {
 	if (argc != 2)
 	{
 		cout << " Usage: requires image arg." << endl;
+		system("pause");
 		return -1;
 	}
+
+	// For debugging.
+	namedWindow(WINDOW_NAME, WINDOW_AUTOSIZE);
 
 	Mat A, C;                          // creates just the header parts
 	A = imread(argv[1], IMREAD_COLOR); // here we'll know the method used (allocate matrix)
 	if (!A.data) // Check for invalid input
 	{
 		cout << "Could not open or find the image" << endl;
+		system("pause");
 		return -1;
 	}
 	// cout << "A = " << endl << " " << A << endl << endl;
+	displayImageForDebugTracing(WINDOW_NAME, A);
 
-	namedWindow("Display window", WINDOW_AUTOSIZE);
-	imshow("Display window", A);
-	waitKey(0);
+
+	// The copy operators will only copy the headers and the pointer to the large matrix, not the data itself.
 
 	Mat B(A);                                 // Use the copy constructor
 	// cout << "B = " << endl << " " << B << endl << endl;
-	imshow("Display window", B);
-	waitKey(0);
+	displayImageForDebugTracing(WINDOW_NAME, B);
 
 	C = A;                                    // Assignment operator
 	// cout << "C = " << endl << " " << C << endl << endl;
-	imshow("Display window", C);
-	waitKey(0);
+	displayImageForDebugTracing(WINDOW_NAME, C);
+
+	// To create a region of interest (ROI) in an image you just create a new header with the new boundaries:
 
 	Mat D(A, Rect(10, 10, 100, 100)); // using a rectangle
 	// cout << "D = " << endl << " " << D << endl << endl;
-	imshow("Display window", D);
-	waitKey(0);
+	displayImageForDebugTracing(WINDOW_NAME, D);
 
 	Mat E = A(Range::all(), Range(1, 3)); // using row and column boundaries
 	// cout << "E = " << endl << " " << E << endl << endl;
-	imshow("Display window", E);
-	waitKey(0);
+	displayImageForDebugTracing(WINDOW_NAME, E);
+
+	// You can copy the matrix itself too
 
 	Mat F = A.clone();
 	// cout << "F = " << endl << " " << F << endl << endl;
-	imshow("Display window", F);
-	waitKey(0);
+	displayImageForDebugTracing(WINDOW_NAME, F);
 
 	Mat G;
 	A.copyTo(G);
 	// cout << "G = " << endl << " " << G << endl << endl;
-	imshow("Display window", G);
-	waitKey(0);
+	displayImageForDebugTracing(WINDOW_NAME, G);
 
 	// system("pause");
 	return 0;
