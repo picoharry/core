@@ -19,9 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{0F198B42-AD57-4062-A09B-4589B19E9411}</ProjectGuid>
+    <ProjectGuid>{70FE6FC5-8BCE-4F11-AD10-B5CB20F937B5}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>CVTutorCoreDrawing01</RootNamespace>
+    <RootNamespace>CVTutorCoreFileIO01</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -149,7 +149,7 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CVTutor.Core.Drawing01.cpp" />
+    <ClCompile Include="CVTutor.Core.FileIO01.cpp" />
     <ClCompile Include="stdafx.cpp" />
   </ItemGroup>
   <ItemGroup>
