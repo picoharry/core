@@ -19,9 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{32EBB020-B206-45E3-811E-0C80B9C6936B}</ProjectGuid>
+    <ProjectGuid>{EBD28315-7F46-4629-9745-F30EC19D3BFA}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>CVTutorCorePixelTransform01</RootNamespace>
+    <RootNamespace>CVTutorCoreCommandLine01</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -145,7 +145,7 @@
     <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CVTutor.Core.PixelTransform01.cpp" />
+    <ClCompile Include="CVTutor.Core.CommandLine01.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
