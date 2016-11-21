@@ -16,4 +16,4 @@
 #include <opencv2/videoio.hpp>
 #include <opencv2/highgui.hpp>
 
-// #include "CVTutor.Core.CommonLib.h"
+#include "CVTutor.Core.CommonLib.h"

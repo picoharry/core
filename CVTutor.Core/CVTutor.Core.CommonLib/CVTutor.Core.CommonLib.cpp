@@ -27,9 +27,17 @@ CCVTutorCoreCommonLib::CCVTutorCoreCommonLib()
 
 CVTUTORCORECOMMONLIB_API void cvtutor::core::displayImageForDebugTracing(string windowName, Mat image)
 {
-	// cout << "Image = " << endl << " " << image << endl << endl;
+    // cout << "Image = " << endl << " " << image << endl << endl;
 
-	imshow(windowName, image);
-	waitKey(0);
+    imshow(windowName, image);
+    waitKey(0);
+}
+
+CVTUTORCORECOMMONLIB_API void cvtutor::core::displayImageForDebugTracing(string windowName, UMat image)
+{
+    // cout << "Image = " << endl << " " << image << endl << endl;
+
+    imshow(windowName, image);
+    waitKey(0);
 }
 

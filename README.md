@@ -23,6 +23,14 @@ Usage:
     `CVTutor.Core.Mat02`
 
 
+### CVTutor.Core.Mat03
+
+* [cv::UMat Class Reference](http://docs.opencv.org/ref/master/d7/d45/classcv_1_1UMat.html)
+
+Usage:    
+    `CVTutor.Core.Mat03`
+
+
 ### CVTutor.Core.Scan01
 
 * [How to scan images, lookup tables and time measurement with OpenCV](http://docs.opencv.org/3.1.0/db/da5/tutorial_how_to_scan_images.html)

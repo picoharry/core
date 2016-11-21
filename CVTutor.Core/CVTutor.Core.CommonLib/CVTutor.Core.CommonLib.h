@@ -26,7 +26,8 @@ namespace cvtutor
 {
 	namespace core
 	{
-		CVTUTORCORECOMMONLIB_API void displayImageForDebugTracing(std::string windowName, cv::Mat image);
+        CVTUTORCORECOMMONLIB_API void displayImageForDebugTracing(std::string windowName, cv::Mat image);
+        CVTUTORCORECOMMONLIB_API void displayImageForDebugTracing(std::string windowName, cv::UMat image);
 
 	}
 }
